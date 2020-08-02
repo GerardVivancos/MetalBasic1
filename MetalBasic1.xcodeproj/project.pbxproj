@@ -7,13 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CF583BE024D74801006F0EF1 /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = CF583BDF24D74801006F0EF1 /* Shaders.metal */; };
 		CFC50F3724D5E68D00AFC0AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC50F3624D5E68D00AFC0AD /* AppDelegate.swift */; };
 		CFC50F3924D5E68D00AFC0AD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC50F3824D5E68D00AFC0AD /* ViewController.swift */; };
 		CFC50F3B24D5E68D00AFC0AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFC50F3A24D5E68D00AFC0AD /* Assets.xcassets */; };
 		CFC50F3E24D5E68D00AFC0AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFC50F3C24D5E68D00AFC0AD /* Main.storyboard */; };
+		CFC50F4724D5F53400AFC0AD /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC50F4624D5F53400AFC0AD /* Renderer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CF583BDF24D74801006F0EF1 /* Shaders.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Shaders.metal; sourceTree = "<group>"; };
+		CF583BE124D75FC7006F0EF1 /* Shaders.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Shaders.h; sourceTree = "<group>"; };
+		CF583BE324D76263006F0EF1 /* MetalBasic1-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MetalBasic1-Bridging-Header.h"; sourceTree = "<group>"; };
 		CFC50F3324D5E68D00AFC0AD /* MetalBasic1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MetalBasic1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFC50F3624D5E68D00AFC0AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CFC50F3824D5E68D00AFC0AD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -21,6 +26,7 @@
 		CFC50F3D24D5E68D00AFC0AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CFC50F3F24D5E68D00AFC0AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CFC50F4024D5E68D00AFC0AD /* MetalBasic1.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MetalBasic1.entitlements; sourceTree = "<group>"; };
+		CFC50F4624D5F53400AFC0AD /* Renderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Renderer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,11 +60,15 @@
 			isa = PBXGroup;
 			children = (
 				CFC50F3624D5E68D00AFC0AD /* AppDelegate.swift */,
+				CFC50F4624D5F53400AFC0AD /* Renderer.swift */,
 				CFC50F3824D5E68D00AFC0AD /* ViewController.swift */,
 				CFC50F3A24D5E68D00AFC0AD /* Assets.xcassets */,
 				CFC50F3C24D5E68D00AFC0AD /* Main.storyboard */,
 				CFC50F3F24D5E68D00AFC0AD /* Info.plist */,
 				CFC50F4024D5E68D00AFC0AD /* MetalBasic1.entitlements */,
+				CF583BDF24D74801006F0EF1 /* Shaders.metal */,
+				CF583BE124D75FC7006F0EF1 /* Shaders.h */,
+				CF583BE324D76263006F0EF1 /* MetalBasic1-Bridging-Header.h */,
 			);
 			path = MetalBasic1;
 			sourceTree = "<group>";
@@ -133,6 +143,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF583BE024D74801006F0EF1 /* Shaders.metal in Sources */,
+				CFC50F4724D5F53400AFC0AD /* Renderer.swift in Sources */,
 				CFC50F3924D5E68D00AFC0AD /* ViewController.swift in Sources */,
 				CFC50F3724D5E68D00AFC0AD /* AppDelegate.swift in Sources */,
 			);
@@ -208,6 +220,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = "MetalBasic1/MetalBasic1-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -261,6 +274,7 @@
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OBJC_BRIDGING_HEADER = "MetalBasic1/MetalBasic1-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 			};
 			name = Release;
